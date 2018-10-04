@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Moving to a new position!"
+date:   2018-10-04 10:30:00
+categories: job update
+comments: false
+---
+Starting from this month, I will be joining the Department of Biostatistics at Johns Hopkins Bloomberg School of Public Health as an [Assistant Scientist](https://www.jhsph.edu/faculty/directory/profile/3739/weiqiang-zhou).
