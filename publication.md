@@ -5,8 +5,6 @@ permalink: /publication/
 slug: publication & Talks
 ---
 
-### Publication
-
 A full list of publications can be found in my google scholar website [here](https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en).
 
 Selected papers (selected from 27 publications):
@@ -28,7 +26,6 @@ Selected papers (selected from 27 publications):
 >__Zhou, W.__ & Yan, H. A discriminatory function for prediction of protein-DNA interactions based on alpha shape modeling. _Bioinformatics_ 26, 2541-2548 (2010).<br/>
 
 
-### Talks
-#### JSM 2019: Single-Cell Transcriptome and Regulome Data Integration
+**JSM 2019: Single-Cell Transcriptome and Regulome Data Integration**
 
 >Slides are available [here](https://github.com/WeiqiangZhou/WeiqiangZhou.github.io/blob/master/JSM_2019_presentation_zhou.pdf).
