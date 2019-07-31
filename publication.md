@@ -2,7 +2,7 @@
 layout: page
 title: Publication & Talks
 permalink: /publication/
-slug: publication
+slug: publication & Talks
 ---
 
 ## Publication
