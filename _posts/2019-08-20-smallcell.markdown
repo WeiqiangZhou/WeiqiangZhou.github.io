@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Single-cell prediction using BIRD is published in Nucleic Acids Research (NAR)!"
-date:   2018-08-20 09:55:00
+date:   2019-08-20 09:55:00
 categories: paper update
 comments: false
 ---
