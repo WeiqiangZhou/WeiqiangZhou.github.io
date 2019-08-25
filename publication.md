@@ -7,7 +7,9 @@ slug: publication & Talks
 
 A full list of publications can be found in my google scholar website [here](https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en).
 
-Selected papers (selected from 27 publications):
+Selected papers (selected from 32 publications):
+
+>__Zhou, W.__ et al. Global prediction of chromatin accessibility using small-cell-number and single-cell RNA-seq. _Nucleic Acids Research_, gkz716 (2019). ([open access](https://doi.org/10.1093/nar/gkz716)) <br/>
 
 >__Zhou, W.__ et al. Genome-wide Prediction of DNase I Hypersensitivity Using Gene Expression. _Nature communications_ 8, 1038 (2017). ([open access](https://www.nature.com/articles/s41467-017-01188-x)) <br/>
 
