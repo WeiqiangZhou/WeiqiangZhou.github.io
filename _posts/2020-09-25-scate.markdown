@@ -1,1 +1,8 @@
-scate
+---
+layout: post
+title:  "Single-cell ATAC-seq signal extraction and enhancement with SCATE is published in Genome Biology!"
+date:   2020-09-25 12:10:00
+categories: paper update
+comments: false
+---
+SCATE is now online in *Genome Biology*: ["Single-cell ATAC-seq signal extraction and enhancement with SCATE"](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02075-3).
