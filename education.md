@@ -6,7 +6,7 @@ slug: education
 ---
 
 
-__Postdoctoral Fellow__ (11/2013-present)
+__Postdoctoral Fellow__ (11/2013-10/2018)
 
 >Department of Biostatistics <br/>
 >Johns Hopkins Bloomberg School of Public Health <br/>
