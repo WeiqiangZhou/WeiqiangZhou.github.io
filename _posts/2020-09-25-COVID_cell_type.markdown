@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "We found unique cell types that are related COVID severity!"
-date:   2020-09-25 12:10:00
+date:   2020-09-25 12:20:00
 categories: paper update
 comments: false
 ---
