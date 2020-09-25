@@ -14,7 +14,7 @@ author:
 github: https://github.com/WeiqiangZhou
 #CV:     http://WeiqiangZhou.github.io/CV_Weiqiang_Zhou_webpage.pdf
 
-paginate: 2
+paginate: 3
 comments: true
 paginate_path: "/page/:num"
 
