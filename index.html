@@ -1,13 +1,190 @@
----
-layout: default
-title: Home
-slug: home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weiqiang Zhou — Computational Genomics</title>
+  <meta name="description"
+        content="Weiqiang Zhou is an Assistant Scientist at Johns Hopkins Bloomberg School of Public Health working on statistical and computational tools for large-scale genomic data analysis.">
+  <link rel="canonical" href="https://www.weiqiangzhou.com/">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72222972-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-72222972-2');
+  </script>
+</head>
+<body>
 
-<div class="post-list">
-  {% for post in paginator.posts %}
-    {% include post.html %}
-  {% endfor %}
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">Weiqiang Zhou</a>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="./publications.html">Publications</a></li>
+      <li><a href="./software.html">Software</a></li>
+      <li><a href="https://github.com/WeiqiangZhou" target="_blank">GitHub</a></li>
+      <li><a href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+    </ul>
+  </div>
+</nav>
 
-  {% include pagination.html %}
-</div>
+<main class="main">
+
+  <!-- ── PROFILE ──────────────────────────────────────── -->
+  <section class="profile-section">
+    <div class="container">
+      <div class="profile-inner">
+
+        <div class="profile-photo">
+          <!-- Replace profile.jpg with your photo, or use the GitHub raw URL below -->
+          <img src="https://raw.githubusercontent.com/WeiqiangZhou/WeiqiangZhou.github.io/master/about.JPG"
+               alt="Weiqiang Zhou"
+               onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>👤</div>'">
+        </div>
+
+        <div class="profile-info">
+          <h1>Weiqiang Zhou</h1>
+          <p class="profile-title">Assistant Scientist</p>
+          <p class="profile-affil">
+            Department of Biostatistics · Johns Hopkins Bloomberg School of Public Health
+          </p>
+          <p class="profile-bio">
+            I develop statistical and computational methods for integrative analysis of
+            large-scale genomic data. My research focuses on single-cell multi-omics,
+            chromatin accessibility prediction, and regulatory genomics — building tools
+            that help researchers understand cell-type heterogeneity and gene regulation
+            at scale.
+          </p>
+          <div class="profile-links">
+            <a class="link-scholar"
+               href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en"
+               target="_blank">
+              📚 Google Scholar
+            </a>
+            <a class="link-github"
+               href="https://github.com/WeiqiangZhou"
+               target="_blank">
+              💻 GitHub
+            </a>
+            <a class="link-email"
+               href="mailto:kenzhou86@gmail.com">
+              ✉️ Email
+            </a>
+            <a class="link-twitter"
+               href="https://twitter.com/kenzhou86"
+               target="_blank">
+              🐦 Twitter / X
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEWS ─────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Recent News</h2>
+      <ul class="news-list" id="news-list">
+        <!-- Populated by JavaScript from data/news.json -->
+        <li style="color:#999;font-size:0.9rem;">Loading…</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── SELECTED PUBLICATIONS ─────────────────────────── -->
+  <section class="section" style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <h2 class="section-title">Selected Publications</h2>
+      <ul class="pub-list" id="highlight-pubs">
+        <!-- Populated by JavaScript from data/publications.json -->
+        <li style="color:#999;font-size:0.9rem;">Loading…</li>
+      </ul>
+      <p style="margin-top:18px;font-size:0.88rem;">
+        <a href="./publications.html">View all publications →</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a href="https://github.com/WeiqiangZhou" target="_blank">GitHub</a>
+      <a href="https://twitter.com/kenzhou86" target="_blank">Twitter / X</a>
+      <a href="mailto:kenzhou86@gmail.com">Email</a>
+    </div>
+    <p class="footer-copy">
+      &copy; <span id="year"></span> Weiqiang Zhou ·
+      Johns Hopkins Bloomberg School of Public Health
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Update copyright year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ── Load news ──────────────────────────────────────────
+  fetch('./data/news.json')
+    .then(r => r.json())
+    .then(news => {
+      const list = document.getElementById('news-list');
+      list.innerHTML = '';
+      news.forEach(item => {
+        const d = new Date(item.date);
+        const label = d.toLocaleDateString('en-US', { year:'numeric', month:'short' });
+        list.innerHTML += `
+          <li class="news-item">
+            <span class="news-date">${label}</span>
+            <span class="news-text">${item.text}</span>
+          </li>`;
+      });
+    })
+    .catch(() => {
+      document.getElementById('news-list').innerHTML =
+        '<li style="color:#999;font-size:0.9rem;">No news available.</li>';
+    });
+
+  // ── Load highlighted publications ──────────────────────
+  fetch('./data/publications.json')
+    .then(r => r.json())
+    .then(pubs => {
+      const list  = document.getElementById('highlight-pubs');
+      const shown = pubs.filter(p => p.highlight);
+      list.innerHTML = '';
+      shown.forEach(p => {
+        const note = p.note ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '';
+        const doi  = p.doi  ? `<a class="pub-link-tag tag-doi" href="https://doi.org/${p.doi}" target="_blank">DOI</a>` : '';
+        list.innerHTML += `
+          <li class="pub-item highlight">
+            <p class="pub-title">
+              ${p.url
+                ? `<a href="${p.url}" target="_blank">${p.title}</a>`
+                : p.title}
+            </p>
+            <p class="pub-authors">${p.authors}</p>
+            <p class="pub-venue">
+              <em>${p.journal}</em>${p.volume ? ` ${p.volume}` : ''}${p.pages ? `, ${p.pages}` : ''} (${p.year})
+            </p>
+            <div class="pub-links">${doi}${note}</div>
+          </li>`;
+      });
+    })
+    .catch(() => {
+      document.getElementById('highlight-pubs').innerHTML =
+        '<li style="color:#999;font-size:0.9rem;">Could not load publications.</li>';
+    });
+</script>
+
+</body>
+</html>
