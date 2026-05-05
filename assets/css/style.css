@@ -466,8 +466,9 @@ a:hover { color: var(--navy); text-decoration: underline; }
 }
 
 .pub-link-tag:hover { filter: brightness(0.88); text-decoration: none; }
-.tag-doi  { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
-.tag-note { background: #f8fafc; color: #64748b; border-color: #cbd5e1; }
+.tag-doi    { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+.tag-note   { background: #f8fafc; color: #64748b; border-color: #cbd5e1; }
+.tag-collab { background: #f0fdf4; color: #166534; border-color: #bbf7d0; }
 
 /* ── SOFTWARE CARDS ──────────────────────────────────────── */
 .software-grid {
