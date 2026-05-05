@@ -1,0 +1,56 @@
+[
+  {
+    "name": "SCATE",
+    "badge": "R Package",
+    "tagline": "Single-Cell ATAC-seq signal Extraction and Enhancement",
+    "desc": "Extracts and enhances signal from sparse single-cell ATAC-seq data by leveraging information across cells and genomic loci. Enables accurate characterization of regulatory activity and cell-type heterogeneity.",
+    "github": "https://github.com/zji90/SCATE",
+    "paper_url": "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02122-3",
+    "paper_label": "Paper (Genome Bio.)"
+  },
+  {
+    "name": "BIRD",
+    "badge": "R / Command Line",
+    "tagline": "Big Data Regression for DNase I Hypersensitivity",
+    "desc": "Predicts genome-wide chromatin accessibility (DNase-seq signal) from gene expression data. Generates predictions across ~1 million genomic loci using a pre-built regression model.",
+    "github": "https://github.com/WeiqiangZhou/BIRD",
+    "paper_url": "https://www.nature.com/articles/s41467-017-01188-x",
+    "paper_label": "Paper (Nat. Comm.)"
+  },
+  {
+    "name": "SCRAT",
+    "badge": "R / Shiny",
+    "tagline": "Single-Cell Regulome Analysis Toolbox",
+    "desc": "An interactive Shiny toolbox for analyzing single-cell regulome data (scATAC-seq, scChIP-seq). Provides clustering, visualization, and regulatory feature analysis with no coding required.",
+    "github": "https://github.com/zji90/SCRAT",
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btx315",
+    "paper_label": "Paper (Bioinformatics)"
+  },
+  {
+    "name": "FUNCODE",
+    "badge": "R Package",
+    "tagline": "Functional Conservation of Regulatory Elements",
+    "desc": "Quantifies functional conservation of human and mouse regulatory elements, enabling comparative analysis of cis-regulatory activity across species.",
+    "github": "https://github.com/WeiqiangZhou/FUNCODE",
+    "paper_url": "",
+    "paper_label": ""
+  },
+  {
+    "name": "Hi-Plex CUT&Tag",
+    "badge": "Method / Protocol",
+    "tagline": "Combinatorial Chromatin Regulatory Mapping",
+    "desc": "A high-throughput multiplexed CUT&Tag approach for simultaneous profiling of multiple chromatin regulatory factors, enabling global mapping of combinatorial epigenetic states.",
+    "github": "",
+    "paper_url": "",
+    "paper_label": ""
+  },
+  {
+    "name": "scMBERT",
+    "badge": "Python / Deep Learning",
+    "tagline": "Single-Cell Multiomic Representation Learning",
+    "desc": "A pre-trained BERT-based deep learning model for single-cell multiomic data representation and prediction, enabling cross-modal inference and cell-type annotation.",
+    "github": "",
+    "paper_url": "",
+    "paper_label": ""
+  }
+]
