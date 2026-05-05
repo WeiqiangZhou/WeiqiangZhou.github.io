@@ -258,9 +258,17 @@ def select_highlights(pubs: list, top_n: int = HIGHLIGHT_TOP_N) -> list:
         p["highlight"] = False
         p.pop("author_role", None)
 
-    # Filter eligible
+    # Filter eligible: first/senior author, recent (last 10 yrs), not a preprint
+    cutoff_year = date.today().year - 10
+    def is_biorxiv(p):
+        return bool(re.search(r'biorxiv', (p.get("url", "") + p.get("journal", "")), re.I))
+
     eligible = []
     for p in pubs:
+        if p.get("year", 0) < cutoff_year:
+            continue
+        if is_biorxiv(p):
+            continue
         is_key, role = is_zhou_first_or_senior(p.get("authors", ""))
         citations = p.get("num_citations", 0) or 0
         if is_key and citations >= MIN_CITATIONS_FOR_HIGHLIGHT:
