@@ -17,7 +17,6 @@
 </head>
 <body>
 
-<!-- ── NAVIGATION ──────────────────────────────────────── -->
 <nav class="nav">
   <div class="nav-inner">
     <a class="nav-brand" href="/">Weiqiang Zhou</a>
@@ -32,8 +31,6 @@
 </nav>
 
 <main class="main">
-
-  <!-- ── PAGE HEADER ──────────────────────────────────── -->
   <div class="page-header">
     <div class="container">
       <h1>Software &amp; Tools</h1>
@@ -41,100 +38,68 @@
     </div>
   </div>
 
-  <!-- ── GRID ─────────────────────────────────────────── -->
   <section class="section">
     <div class="container">
       <div class="software-grid">
-
-        <!-- SCATE -->
         <div class="sw-card">
           <span class="sw-badge">R Package</span>
           <p class="sw-name">SCATE</p>
           <p class="sw-tagline">Single-Cell ATAC-seq signal Extraction and Enhancement</p>
-          <p class="sw-desc">
-            SCATE leverages information across cells and genomic loci to impute and
-            enhance signal in sparse single-cell ATAC-seq data. It enables accurate
-            characterization of regulatory activity and cell-type heterogeneity from
-            chromatin accessibility profiles.
-          </p>
-          <div class="sw-links">
-            <a class="sw-link sw-link-primary"
-               href="https://github.com/zji90/SCATE" target="_blank">💻 GitHub</a>
-            <a class="sw-link sw-link-secondary"
-               href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02122-3"
-               target="_blank">📄 Paper (Genome Bio.)</a>
-          </div>
+          <p class="sw-desc">Extracts and enhances signal from sparse single-cell ATAC-seq data by leveraging information across cells and genomic loci. Enables accurate characterization of regulatory activity and cell-type heterogeneity.</p>
+          <div class="sw-links"><a class="sw-link sw-link-primary" href="https://github.com/zji90/SCATE" target="_blank">💻 GitHub</a>
+            <a class="sw-link sw-link-secondary" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02122-3" target="_blank">📄 Paper (Genome Bio.)</a></div>
         </div>
 
-        <!-- BIRD -->
         <div class="sw-card">
           <span class="sw-badge">R / Command Line</span>
           <p class="sw-name">BIRD</p>
           <p class="sw-tagline">Big Data Regression for DNase I Hypersensitivity</p>
-          <p class="sw-desc">
-            BIRD predicts genome-wide chromatin accessibility (DNase-seq signal) from
-            gene expression data — both microarray and RNA-seq. Using a pre-built model
-            it generates predictions across ~1 million genomic loci and outputs WIG or
-            matrix format for UCSC Genome Browser visualization.
-          </p>
-          <div class="sw-links">
-            <a class="sw-link sw-link-primary"
-               href="https://github.com/WeiqiangZhou/BIRD" target="_blank">💻 GitHub</a>
-            <a class="sw-link sw-link-secondary"
-               href="https://www.nature.com/articles/s41467-017-01188-x"
-               target="_blank">📄 Paper (Nat. Comm.)</a>
-          </div>
+          <p class="sw-desc">Predicts genome-wide chromatin accessibility (DNase-seq signal) from gene expression data. Generates predictions across ~1 million genomic loci using a pre-built regression model.</p>
+          <div class="sw-links"><a class="sw-link sw-link-primary" href="https://github.com/WeiqiangZhou/BIRD" target="_blank">💻 GitHub</a>
+            <a class="sw-link sw-link-secondary" href="https://www.nature.com/articles/s41467-017-01188-x" target="_blank">📄 Paper (Nat. Comm.)</a></div>
         </div>
 
-        <!-- PDDB -->
-        <div class="sw-card">
-          <span class="sw-badge">Web Database</span>
-          <p class="sw-name">PDDB</p>
-          <p class="sw-tagline">Predicted DNase I Hypersensitivity Database</p>
-          <p class="sw-desc">
-            A comprehensive database of predicted DNase I hypersensitivity profiles for
-            thousands of biological samples, generated using BIRD from gene expression
-            data. Allows researchers to query and download chromatin accessibility
-            predictions across diverse cell types and conditions.
-          </p>
-          <div class="sw-links">
-            <a class="sw-link sw-link-primary"
-               href="http://jilab.biostat.jhsph.edu/~bsherwo2/bird/index.php"
-               target="_blank">🌐 Web App</a>
-          </div>
-        </div>
-
-        <!-- SCRAT -->
         <div class="sw-card">
           <span class="sw-badge">R / Shiny</span>
           <p class="sw-name">SCRAT</p>
           <p class="sw-tagline">Single-Cell Regulome Analysis Toolbox</p>
-          <p class="sw-desc">
-            SCRAT is an interactive toolbox with a Shiny GUI for analyzing single-cell
-            regulome data (scATAC-seq, scChIP-seq, etc.). It provides clustering,
-            visualization, and regulatory feature analysis — no coding required.
-          </p>
-          <div class="sw-links">
-            <a class="sw-link sw-link-primary"
-               href="https://github.com/zji90/SCRAT" target="_blank">💻 GitHub</a>
-            <a class="sw-link sw-link-secondary"
-               href="https://doi.org/10.1093/bioinformatics/btx315"
-               target="_blank">📄 Paper (Bioinformatics)</a>
-          </div>
+          <p class="sw-desc">An interactive Shiny toolbox for analyzing single-cell regulome data (scATAC-seq, scChIP-seq). Provides clustering, visualization, and regulatory feature analysis with no coding required.</p>
+          <div class="sw-links"><a class="sw-link sw-link-primary" href="https://github.com/zji90/SCRAT" target="_blank">💻 GitHub</a>
+            <a class="sw-link sw-link-secondary" href="https://doi.org/10.1093/bioinformatics/btx315" target="_blank">📄 Paper (Bioinformatics)</a></div>
         </div>
 
-      </div>
+        <div class="sw-card">
+          <span class="sw-badge">R Package</span>
+          <p class="sw-name">FUNCODE</p>
+          <p class="sw-tagline">Functional Conservation of Regulatory Elements</p>
+          <p class="sw-desc">Quantifies functional conservation of human and mouse regulatory elements, enabling comparative analysis of cis-regulatory activity across species.</p>
+          <div class="sw-links"><a class="sw-link sw-link-primary" href="https://github.com/WeiqiangZhou/FUNCODE" target="_blank">💻 GitHub</a></div>
+        </div>
 
+        <div class="sw-card">
+          <span class="sw-badge">Method / Protocol</span>
+          <p class="sw-name">Hi-Plex CUT&Tag</p>
+          <p class="sw-tagline">Combinatorial Chromatin Regulatory Mapping</p>
+          <p class="sw-desc">A high-throughput multiplexed CUT&Tag approach for simultaneous profiling of multiple chromatin regulatory factors, enabling global mapping of combinatorial epigenetic states.</p>
+          <div class="sw-links"></div>
+        </div>
+
+        <div class="sw-card">
+          <span class="sw-badge">Python / Deep Learning</span>
+          <p class="sw-name">scMBERT</p>
+          <p class="sw-tagline">Single-Cell Multiomic Representation Learning</p>
+          <p class="sw-desc">A pre-trained BERT-based deep learning model for single-cell multiomic data representation and prediction, enabling cross-modal inference and cell-type annotation.</p>
+          <div class="sw-links"></div>
+        </div>
+      </div>
       <p style="margin-top:28px;font-size:0.87rem;color:var(--text-muted);">
         All projects and source code are available at
         <a href="https://github.com/WeiqiangZhou" target="_blank">github.com/WeiqiangZhou</a>.
       </p>
     </div>
   </section>
-
 </main>
 
-<!-- ── FOOTER ─────────────────────────────────────────── -->
 <footer class="footer">
   <div class="container">
     <div class="footer-links">
@@ -149,8 +114,6 @@
     </p>
   </div>
 </footer>
-
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
 </body>
 </html>
