@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications — Weiqiang Zhou</title>
+  <meta name="description"
+        content="Full list of publications by Weiqiang Zhou, Johns Hopkins Bloomberg School of Public Health.">
+  <link rel="canonical" href="https://www.weiqiangzhou.com/publications.html">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72222972-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'UA-72222972-2');
+  </script>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">Weiqiang Zhou</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="./publications.html" class="active">Publications</a></li>
+      <li><a href="./software.html">Software</a></li>
+      <li><a href="https://github.com/WeiqiangZhou" target="_blank">GitHub</a></li>
+      <li><a href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- ── PAGE HEADER ──────────────────────────────────── -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Publications</h1>
+      <p>
+        Full list · also available on
+        <a href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en"
+           target="_blank" style="color:#aed6ea;">Google Scholar</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ── FILTER + LIST ────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+
+      <div class="filter-bar" id="filter-bar">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" data-year="all">All</button>
+        <!-- Year buttons injected by JS -->
+      </div>
+
+      <div id="pub-container">
+        <p style="color:#999;font-size:0.9rem;padding:20px 0;">Loading publications…</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a href="https://github.com/WeiqiangZhou" target="_blank">GitHub</a>
+      <a href="https://twitter.com/kenzhou86" target="_blank">Twitter / X</a>
+      <a href="mailto:kenzhou86@gmail.com">Email</a>
+    </div>
+    <p class="footer-copy">
+      &copy; <span id="year"></span> Weiqiang Zhou ·
+      Johns Hopkins Bloomberg School of Public Health
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  let allPubs = [];
+
+  function renderPub(p) {
+    const doi  = p.doi  ? `<a class="pub-link-tag tag-doi"  href="https://doi.org/${p.doi}" target="_blank">DOI / Open Access</a>` : '';
+    const note = p.note ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '';
+    const hl   = p.highlight ? ' highlight' : '';
+    return `
+      <li class="pub-item${hl}">
+        <p class="pub-title">
+          ${p.url
+            ? `<a href="${p.url}" target="_blank">${p.title}</a>`
+            : p.title}
+        </p>
+        <p class="pub-authors">${p.authors}</p>
+        <p class="pub-venue">
+          <em>${p.journal}</em>${p.volume ? ' ' + p.volume : ''}${p.pages ? ', ' + p.pages : ''} (${p.year})
+        </p>
+        ${(doi || note) ? `<div class="pub-links">${doi}${note}</div>` : ''}
+      </li>`;
+  }
+
+  function render(yearFilter) {
+    const pubs   = yearFilter === 'all'
+                   ? allPubs
+                   : allPubs.filter(p => p.year === yearFilter);
+
+    // Group by year descending
+    const byYear = {};
+    pubs.forEach(p => {
+      (byYear[p.year] = byYear[p.year] || []).push(p);
+    });
+
+    const years  = Object.keys(byYear).sort((a,b) => b - a);
+    const container = document.getElementById('pub-container');
+
+    if (years.length === 0) {
+      container.innerHTML = '<p style="color:#999;padding:20px 0;">No publications found.</p>';
+      return;
+    }
+
+    container.innerHTML = years.map(y => `
+      <div class="pub-year-group">
+        <p class="pub-year-label">${y}</p>
+        <ul class="pub-list">
+          ${byYear[y].map(renderPub).join('')}
+        </ul>
+      </div>
+    `).join('');
+  }
+
+  fetch('./data/publications.json')
+    .then(r => r.json())
+    .then(pubs => {
+      allPubs = pubs.sort((a,b) => b.year - a.year);
+
+      // Build year filter buttons
+      const years    = [...new Set(pubs.map(p => p.year))].sort((a,b) => b-a);
+      const filterBar = document.getElementById('filter-bar');
+      years.forEach(y => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.dataset.year = y;
+        btn.textContent  = y;
+        filterBar.appendChild(btn);
+      });
+
+      render('all');
+
+      // Filter button clicks
+      filterBar.addEventListener('click', e => {
+        if (!e.target.classList.contains('filter-btn')) return;
+        filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        const yr = e.target.dataset.year === 'all' ? 'all' : parseInt(e.target.dataset.year);
+        render(yr);
+      });
+    })
+    .catch(() => {
+      document.getElementById('pub-container').innerHTML =
+        '<p style="color:#c00;padding:20px 0;">Error loading publications. Please try again.</p>';
+    });
+</script>
+
+</body>
+</html>
