@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software — Weiqiang Zhou</title>
+  <meta name="description"
+        content="Software and computational tools developed by Weiqiang Zhou for genomics research.">
+  <link rel="canonical" href="https://www.weiqiangzhou.com/software.html">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72222972-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'UA-72222972-2');
+  </script>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">Weiqiang Zhou</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="./publications.html">Publications</a></li>
+      <li><a href="./software.html" class="active">Software</a></li>
+      <li><a href="https://github.com/WeiqiangZhou" target="_blank">GitHub</a></li>
+      <li><a href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- ── PAGE HEADER ──────────────────────────────────── -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Software &amp; Tools</h1>
+      <p>Open-source computational tools for genomics and single-cell analysis</p>
+    </div>
+  </div>
+
+  <!-- ── SOFTWARE GRID ────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+
+      <div class="software-grid">
+
+        <!-- SCATE -->
+        <div class="sw-card">
+          <span class="sw-badge">R Package</span>
+          <p class="sw-name">SCATE</p>
+          <p class="sw-tagline">Single-Cell ATAC-seq signal Extraction</p>
+          <p class="sw-desc">
+            SCATE extracts and enhances signal from sparse single-cell ATAC-seq data.
+            It leverages information across cells and genomic loci to impute regulatory
+            activity with high accuracy, enabling downstream analysis of cell-type
+            heterogeneity and regulatory dynamics.
+          </p>
+          <div class="sw-links">
+            <a class="sw-link sw-link-primary"
+               href="https://github.com/zji90/SCATE" target="_blank">
+              💻 GitHub
+            </a>
+            <a class="sw-link sw-link-secondary"
+               href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02122-3"
+               target="_blank">
+              📄 Paper
+            </a>
+          </div>
+        </div>
+
+        <!-- BIRD -->
+        <div class="sw-card">
+          <span class="sw-badge">R / Command Line</span>
+          <p class="sw-name">BIRD</p>
+          <p class="sw-tagline">Big Data Regression for DNase-seq</p>
+          <p class="sw-desc">
+            BIRD predicts genome-wide DNase I hypersensitivity (chromatin accessibility)
+            from gene expression data — both microarray and RNA-seq. Using a pre-built
+            model, it generates predictions for ~1 million genomic loci and outputs
+            data in matrix or WIG format for UCSC Genome Browser visualization.
+          </p>
+          <div class="sw-links">
+            <a class="sw-link sw-link-primary"
+               href="https://github.com/WeiqiangZhou/BIRD" target="_blank">
+              💻 GitHub
+            </a>
+            <a class="sw-link sw-link-secondary"
+               href="https://www.nature.com/articles/s41467-017-01188-x"
+               target="_blank">
+              📄 Paper (Nat. Comm.)
+            </a>
+          </div>
+        </div>
+
+        <!-- PDDB -->
+        <div class="sw-card">
+          <span class="sw-badge">Web Database</span>
+          <p class="sw-name">PDDB</p>
+          <p class="sw-tagline">Predicted DNase I Hypersensitivity Database</p>
+          <p class="sw-desc">
+            PDDB is a comprehensive database of predicted DNase I hypersensitivity
+            profiles for thousands of biological samples, generated from gene expression
+            data using BIRD. It allows researchers to query and download chromatin
+            accessibility predictions across diverse cell types and conditions.
+          </p>
+          <div class="sw-links">
+            <a class="sw-link sw-link-primary"
+               href="http://jilab.biostat.jhsph.edu/~bsherwo2/bird/index.php"
+               target="_blank">
+              🌐 Web App
+            </a>
+          </div>
+        </div>
+
+        <!-- SCRAT -->
+        <div class="sw-card">
+          <span class="sw-badge">R / Shiny App</span>
+          <p class="sw-name">SCRAT</p>
+          <p class="sw-tagline">Single-Cell Regulome Analysis Toolbox</p>
+          <p class="sw-desc">
+            SCRAT is a toolbox with a graphical user interface for studying cell
+            heterogeneity using single-cell regulome data (scATAC-seq, scChIP-seq,
+            etc.). It provides clustering, visualization, and regulatory feature
+            analysis in an interactive Shiny interface — no coding required.
+          </p>
+          <div class="sw-links">
+            <a class="sw-link sw-link-primary"
+               href="https://github.com/zji90/SCRAT" target="_blank">
+              💻 GitHub
+            </a>
+            <a class="sw-link sw-link-secondary"
+               href="https://doi.org/10.1093/bioinformatics/btx315"
+               target="_blank">
+              📄 Paper (Bioinformatics)
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /.software-grid -->
+
+      <p style="margin-top:28px;font-size:0.88rem;color:var(--muted);">
+        For all projects and code, visit
+        <a href="https://github.com/WeiqiangZhou" target="_blank">github.com/WeiqiangZhou</a>.
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a href="https://github.com/WeiqiangZhou" target="_blank">GitHub</a>
+      <a href="https://twitter.com/kenzhou86" target="_blank">Twitter / X</a>
+      <a href="mailto:kenzhou86@gmail.com">Email</a>
+    </div>
+    <p class="footer-copy">
+      &copy; <span id="year"></span> Weiqiang Zhou ·
+      Johns Hopkins Bloomberg School of Public Health
+    </p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
