@@ -22,6 +22,28 @@ Requirements:
     pip install scholarly requests python-dotenv
 """
 
+# ── Bootstrap: install missing dependencies before anything else ──────────────
+import subprocess, sys as _sys
+
+def _ensure_deps():
+    import importlib
+    needed = []
+    for pkg, mod in [("scholarly", "scholarly"), ("requests", "requests"), ("python-dotenv", "dotenv")]:
+        try:
+            importlib.import_module(mod)
+        except ImportError:
+            needed.append(pkg)
+    if needed:
+        print(f"[bootstrap] Installing: {', '.join(needed)}", flush=True)
+        subprocess.check_call([
+            _sys.executable, "-m", "pip", "install", "--quiet",
+            "--break-system-packages", *needed
+        ])
+        print("[bootstrap] Done.", flush=True)
+
+_ensure_deps()
+# ─────────────────────────────────────────────────────────────────────────────
+
 import json, os, sys, re, base64, time, hashlib, argparse
 from datetime import datetime, date
 from pathlib import Path
