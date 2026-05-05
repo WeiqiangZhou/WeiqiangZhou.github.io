@@ -1,2 +1,18 @@
-_site
-.sass-cache
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+env/
+
+# Agent secrets — never commit these
+agent/.env
+agent/secrets.json
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
