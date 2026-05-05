@@ -168,12 +168,16 @@
 
   // ── Load highlighted publications ──────────────────────
   // Shows first/senior-author highlights, then collaboration highlights
+  // Only includes publications from the last 10 years
   fetch('./data/publications.json')
     .then(r => r.json())
     .then(pubs => {
       const list  = document.getElementById('highlight-pubs');
-      const primary = pubs.filter(p => p.highlight);
-      const collab  = pubs.filter(p => p.highlight_collab && !p.highlight).slice(0, 2);
+      const cutoff = new Date().getFullYear() - 10;
+      const isBioRxiv = p => /biorxiv/i.test(p.url || '') || /biorxiv/i.test(p.journal || '');
+      const recent = pubs.filter(p => p.year >= cutoff && !isBioRxiv(p));
+      const primary = recent.filter(p => p.highlight);
+      const collab  = recent.filter(p => p.highlight_collab && !p.highlight).slice(0, 2);
       const shown   = [...primary, ...collab];
       list.innerHTML = '';
       shown.forEach(p => {
