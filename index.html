@@ -134,19 +134,30 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // ── Load news ──────────────────────────────────────────
+  // ── Load news (top 8 only) ─────────────────────────────
   fetch('./data/news.json')
     .then(r => r.json())
     .then(news => {
       const list = document.getElementById('news-list');
       list.innerHTML = '';
-      news.forEach(item => {
+      news.slice(0, 8).forEach(item => {
         const d = new Date(item.date + 'T00:00:00');
         const label = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+        // If the text already contains HTML links, render as-is.
+        // If not but a url field exists, wrap plain text title in a link.
+        let text = item.text;
+        if (item.url && !text.includes('<a ')) {
+          // Wrap the part after "New publication: " in a link
+          text = text.replace(
+            /^(New publication:\s*)(.+)$/s,
+            (_, prefix, title) =>
+              `${prefix}<a href="${item.url}" target="_blank">${title}</a>`
+          );
+        }
         list.innerHTML += `
           <li class="news-item">
             <span class="news-date">${label}</span>
-            <span class="news-text">${item.text}</span>
+            <span class="news-text">${text}</span>
           </li>`;
       });
     })
@@ -156,15 +167,21 @@
     });
 
   // ── Load highlighted publications ──────────────────────
+  // Shows first/senior-author highlights, then collaboration highlights
   fetch('./data/publications.json')
     .then(r => r.json())
     .then(pubs => {
       const list  = document.getElementById('highlight-pubs');
-      const shown = pubs.filter(p => p.highlight);
+      const primary = pubs.filter(p => p.highlight);
+      const collab  = pubs.filter(p => p.highlight_collab && !p.highlight).slice(0, 2);
+      const shown   = [...primary, ...collab];
       list.innerHTML = '';
       shown.forEach(p => {
-        const doi  = p.doi  ? `<a class="pub-link-tag tag-doi" href="https://doi.org/${p.doi}" target="_blank">DOI</a>` : '';
-        const note = p.note ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '';
+        const doi   = p.doi ? `<a class="pub-link-tag tag-doi" href="https://doi.org/${p.doi}" target="_blank">DOI</a>` : '';
+        const isCollab = p.highlight_collab && !p.highlight;
+        const badge = isCollab
+          ? `<span class="pub-link-tag tag-collab">Collaboration</span>`
+          : (p.note ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '');
         list.innerHTML += `
           <li class="pub-item">
             <span class="pub-year-badge">${p.year}</span>
@@ -172,11 +189,11 @@
               <p class="pub-title">
                 ${p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title}
               </p>
-              <p class="pub-authors">${p.authors}</p>
+              <p class="pub-authors">${p.authors || ''}</p>
               <p class="pub-venue">
-                ${p.journal}${p.volume ? ' ' + p.volume : ''}${p.pages ? ', ' + p.pages : ''}
+                ${p.journal || ''}${p.volume ? ' ' + p.volume : ''}${p.pages ? ', ' + p.pages : ''}
               </p>
-              ${(doi || note) ? `<div class="pub-links">${doi}${note}</div>` : ''}
+              ${(doi || badge) ? `<div class="pub-links">${doi}${badge}</div>` : ''}
             </div>
           </li>`;
       });
