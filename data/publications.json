@@ -468,16 +468,18 @@
     "id": "987d5de9",
     "year": 2021,
     "title": "Metabolic programs define dysfunctional immune responses in severe COVID-19 patients",
-    "authors": "",
-    "journal": "",
-    "volume": "",
-    "pages": "",
-    "doi": "",
-    "url": "",
+    "authors": "Thompson EA, Cascino K, Ordonez AA, Zhou W, Vanek M, Walter S, Creanga A, Hasan N, Narayanan D, Sauer L, Roederer M, Rubin EJ, Quinn TC, Karaba AH, Townsend AR, Levin AS, Feinberg AP, Cox AL",
+    "journal": "Cell Reports",
+    "volume": "34(11)",
+    "pages": "108863",
+    "doi": "10.1016/j.celrep.2021.108863",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2211124721001777",
     "highlight": false,
     "tags": [],
     "_source": "scholar",
-    "num_citations": 148
+    "num_citations": 148,
+    "highlight_collab": true,
+    "note": "Collaboration"
   },
   {
     "id": "82866075",
@@ -820,17 +822,18 @@
     "title": "HOXB7 Is an ERα Cofactor in the Activation of HER2 and Multiple ER Target Genes Leading to Endocrine Resistance",
     "authors": "Jin, K., Park, S., Teo, W. W., Chandrasekaran, P., Qian, B. Z., Soady, K., Zhou, W., ... & Park, B. H.",
     "journal": "Cancer Discovery",
-    "volume": "5",
+    "volume": "5(9)",
     "pages": "944–959",
-    "doi": "10.1158/2159-8290.CD-14-1191",
+    "doi": "10.1158/2159-8290.CD-14-1539",
     "url": "https://cancerdiscovery.aacrjournals.org/content/5/9/944",
-    "note": "Contribution: computational and statistical analysis",
+    "note": "Collaboration",
     "highlight": false,
     "tags": [
       "cancer",
       "genomics"
     ],
-    "num_citations": 102
+    "num_citations": 102,
+    "highlight_collab": true
   },
   {
     "id": "45c22dbe",
