@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Software — Weiqiang Zhou</title>
   <meta name="description"
-        content="Software and computational tools developed by Weiqiang Zhou for genomics research.">
+        content="Open-source computational tools for genomics and single-cell analysis developed by Weiqiang Zhou.">
   <link rel="canonical" href="https://www.weiqiangzhou.com/software.html">
   <link rel="stylesheet" href="./assets/css/style.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72222972-2"></script>
@@ -41,33 +41,28 @@
     </div>
   </div>
 
-  <!-- ── SOFTWARE GRID ────────────────────────────────── -->
+  <!-- ── GRID ─────────────────────────────────────────── -->
   <section class="section">
     <div class="container">
-
       <div class="software-grid">
 
         <!-- SCATE -->
         <div class="sw-card">
           <span class="sw-badge">R Package</span>
           <p class="sw-name">SCATE</p>
-          <p class="sw-tagline">Single-Cell ATAC-seq signal Extraction</p>
+          <p class="sw-tagline">Single-Cell ATAC-seq signal Extraction and Enhancement</p>
           <p class="sw-desc">
-            SCATE extracts and enhances signal from sparse single-cell ATAC-seq data.
-            It leverages information across cells and genomic loci to impute regulatory
-            activity with high accuracy, enabling downstream analysis of cell-type
-            heterogeneity and regulatory dynamics.
+            SCATE leverages information across cells and genomic loci to impute and
+            enhance signal in sparse single-cell ATAC-seq data. It enables accurate
+            characterization of regulatory activity and cell-type heterogeneity from
+            chromatin accessibility profiles.
           </p>
           <div class="sw-links">
             <a class="sw-link sw-link-primary"
-               href="https://github.com/zji90/SCATE" target="_blank">
-              💻 GitHub
-            </a>
+               href="https://github.com/zji90/SCATE" target="_blank">💻 GitHub</a>
             <a class="sw-link sw-link-secondary"
                href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02122-3"
-               target="_blank">
-              📄 Paper
-            </a>
+               target="_blank">📄 Paper (Genome Bio.)</a>
           </div>
         </div>
 
@@ -75,23 +70,19 @@
         <div class="sw-card">
           <span class="sw-badge">R / Command Line</span>
           <p class="sw-name">BIRD</p>
-          <p class="sw-tagline">Big Data Regression for DNase-seq</p>
+          <p class="sw-tagline">Big Data Regression for DNase I Hypersensitivity</p>
           <p class="sw-desc">
-            BIRD predicts genome-wide DNase I hypersensitivity (chromatin accessibility)
-            from gene expression data — both microarray and RNA-seq. Using a pre-built
-            model, it generates predictions for ~1 million genomic loci and outputs
-            data in matrix or WIG format for UCSC Genome Browser visualization.
+            BIRD predicts genome-wide chromatin accessibility (DNase-seq signal) from
+            gene expression data — both microarray and RNA-seq. Using a pre-built model
+            it generates predictions across ~1 million genomic loci and outputs WIG or
+            matrix format for UCSC Genome Browser visualization.
           </p>
           <div class="sw-links">
             <a class="sw-link sw-link-primary"
-               href="https://github.com/WeiqiangZhou/BIRD" target="_blank">
-              💻 GitHub
-            </a>
+               href="https://github.com/WeiqiangZhou/BIRD" target="_blank">💻 GitHub</a>
             <a class="sw-link sw-link-secondary"
                href="https://www.nature.com/articles/s41467-017-01188-x"
-               target="_blank">
-              📄 Paper (Nat. Comm.)
-            </a>
+               target="_blank">📄 Paper (Nat. Comm.)</a>
           </div>
         </div>
 
@@ -101,51 +92,43 @@
           <p class="sw-name">PDDB</p>
           <p class="sw-tagline">Predicted DNase I Hypersensitivity Database</p>
           <p class="sw-desc">
-            PDDB is a comprehensive database of predicted DNase I hypersensitivity
-            profiles for thousands of biological samples, generated from gene expression
-            data using BIRD. It allows researchers to query and download chromatin
-            accessibility predictions across diverse cell types and conditions.
+            A comprehensive database of predicted DNase I hypersensitivity profiles for
+            thousands of biological samples, generated using BIRD from gene expression
+            data. Allows researchers to query and download chromatin accessibility
+            predictions across diverse cell types and conditions.
           </p>
           <div class="sw-links">
             <a class="sw-link sw-link-primary"
                href="http://jilab.biostat.jhsph.edu/~bsherwo2/bird/index.php"
-               target="_blank">
-              🌐 Web App
-            </a>
+               target="_blank">🌐 Web App</a>
           </div>
         </div>
 
         <!-- SCRAT -->
         <div class="sw-card">
-          <span class="sw-badge">R / Shiny App</span>
+          <span class="sw-badge">R / Shiny</span>
           <p class="sw-name">SCRAT</p>
           <p class="sw-tagline">Single-Cell Regulome Analysis Toolbox</p>
           <p class="sw-desc">
-            SCRAT is a toolbox with a graphical user interface for studying cell
-            heterogeneity using single-cell regulome data (scATAC-seq, scChIP-seq,
-            etc.). It provides clustering, visualization, and regulatory feature
-            analysis in an interactive Shiny interface — no coding required.
+            SCRAT is an interactive toolbox with a Shiny GUI for analyzing single-cell
+            regulome data (scATAC-seq, scChIP-seq, etc.). It provides clustering,
+            visualization, and regulatory feature analysis — no coding required.
           </p>
           <div class="sw-links">
             <a class="sw-link sw-link-primary"
-               href="https://github.com/zji90/SCRAT" target="_blank">
-              💻 GitHub
-            </a>
+               href="https://github.com/zji90/SCRAT" target="_blank">💻 GitHub</a>
             <a class="sw-link sw-link-secondary"
                href="https://doi.org/10.1093/bioinformatics/btx315"
-               target="_blank">
-              📄 Paper (Bioinformatics)
-            </a>
+               target="_blank">📄 Paper (Bioinformatics)</a>
           </div>
         </div>
 
-      </div><!-- /.software-grid -->
+      </div>
 
-      <p style="margin-top:28px;font-size:0.88rem;color:var(--muted);">
-        For all projects and code, visit
+      <p style="margin-top:28px;font-size:0.87rem;color:var(--text-muted);">
+        All projects and source code are available at
         <a href="https://github.com/WeiqiangZhou" target="_blank">github.com/WeiqiangZhou</a>.
       </p>
-
     </div>
   </section>
 
@@ -161,7 +144,7 @@
       <a href="mailto:kenzhou86@gmail.com">Email</a>
     </div>
     <p class="footer-copy">
-      &copy; <span id="year"></span> Weiqiang Zhou ·
+      &copy; <span id="year"></span> Weiqiang Zhou &middot;
       Johns Hopkins Bloomberg School of Public Health
     </p>
   </div>
