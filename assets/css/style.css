@@ -31,8 +31,8 @@ body {
                "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 17.5px;
+  line-height: 1.7;
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -61,7 +61,7 @@ a:hover { color: var(--navy); text-decoration: underline; }
 
 .nav-brand {
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--white);
   text-decoration: none;
   letter-spacing: -0.2px;
@@ -76,7 +76,7 @@ a:hover { color: var(--navy); text-decoration: underline; }
 .nav-links a {
   color: rgba(255,255,255,0.7);
   text-decoration: none;
-  font-size: 0.87rem;
+  font-size: 0.93rem;
   font-weight: 500;
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
@@ -156,7 +156,7 @@ a:hover { color: var(--navy); text-decoration: underline; }
 }
 
 .hero-info h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--white);
   letter-spacing: -0.5px;
@@ -164,20 +164,20 @@ a:hover { color: var(--navy); text-decoration: underline; }
 }
 
 .hero-title {
-  font-size: 0.97rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: rgba(255,255,255,0.8);
   margin-bottom: 2px;
 }
 
 .hero-affil {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: rgba(255,255,255,0.55);
   margin-bottom: 18px;
 }
 
 .hero-bio {
-  font-size: 0.92rem;
+  font-size: 1.0rem;
   color: rgba(255,255,255,0.72);
   max-width: 560px;
   line-height: 1.65;
@@ -319,7 +319,7 @@ a:hover { color: var(--navy); text-decoration: underline; }
 }
 
 .news-text {
-  font-size: 0.9rem;
+  font-size: 0.97rem;
   color: var(--text);
   line-height: 1.5;
 }
@@ -425,7 +425,7 @@ a:hover { color: var(--navy); text-decoration: underline; }
 
 .pub-title {
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 1.0rem;
   margin-bottom: 4px;
   line-height: 1.42;
   color: var(--text);
@@ -435,13 +435,13 @@ a:hover { color: var(--navy); text-decoration: underline; }
 .pub-title a:hover { color: var(--navy); text-decoration: underline; }
 
 .pub-authors {
-  font-size: 0.83rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 3px;
 }
 
 .pub-venue {
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   color: var(--accent);
   font-weight: 500;
   font-style: italic;
@@ -521,7 +521,7 @@ a:hover { color: var(--navy); text-decoration: underline; }
 }
 
 .sw-desc {
-  font-size: 0.87rem;
+  font-size: 0.94rem;
   color: var(--text-mid);
   line-height: 1.62;
   flex: 1;
