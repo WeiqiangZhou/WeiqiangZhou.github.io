@@ -1,19 +1,23 @@
 [
   {
     "date": "2026-07-01",
-    "text": "New publication: CRISPR screen of human pancreatic cancer xenografts identifies a KLF5 proliferation vulnerability through epigenetic modifiers NCAPD2 and MTHFD1."
+    "text": "New publication: CRISPR screen of human pancreatic cancer xenografts identifies a KLF5 proliferation vulnerability through epigenetic modifiers NCAPD2 and MTHFD1.",
+    "url": "https://link.springer.com/article/10.1186/s12943-026-02575-z"
   },
   {
     "date": "2026-07-01",
-    "text": "New publication: DNA Methylation Stochasticity is Linked to Transcriptional Variability and Convergent Epigenetic Disruption Across Genetic Subtypes of Acute Myeloid Leukemia."
+    "text": "New publication: DNA Methylation Stochasticity is Linked to Transcriptional Variability and Convergent Epigenetic Disruption Across Genetic Subtypes of Acute Myeloid Leukemia.",
+    "url": "https://www.biorxiv.org/content/10.1101/2024.10.26.620422v1.full"
   },
   {
     "date": "2025-07-01",
-    "text": "New publication: A systematic evaluation of highly variable gene selection methods for single-cell RNA-sequencing."
+    "text": "New publication: A systematic evaluation of highly variable gene selection methods for single-cell RNA-sequencing.",
+    "url": "https://link.springer.com/article/10.1186/s13059-025-03887-x"
   },
   {
     "date": "2025-07-01",
-    "text": "New publication: SARS-CoV-2 induces neutrophil degranulation and differentiation into myeloid-derived suppressor cells associated with severe COVID-19."
+    "text": "New publication: SARS-CoV-2 induces neutrophil degranulation and differentiation into myeloid-derived suppressor cells associated with severe COVID-19.",
+    "url": "https://www.science.org/doi/10.1126/scitranslmed.adn7527"
   },
   {
     "date": "2025-07-01",
@@ -21,7 +25,8 @@
   },
   {
     "date": "2025-07-01",
-    "text": "New publication: Regulatory T Cell Mimicry by a Subset of Mesenchymal GBM Stem Cells Suppresses CD4 and CD8 Cells."
+    "text": "New publication: Regulatory T Cell Mimicry by a Subset of Mesenchymal GBM Stem Cells Suppresses CD4 and CD8 Cells.",
+    "url": "https://www.mdpi.com/2073-4409/14/8/592"
   },
   {
     "date": "2025-07-01",
@@ -29,11 +34,13 @@
   },
   {
     "date": "2025-07-01",
-    "text": "New publication: Global Mapping of Combinatorial Chromatin Regulatory Events Using Hi-Plex CUT&Tag."
+    "text": "New publication: Global Mapping of Combinatorial Chromatin Regulatory Events Using Hi-Plex CUT&Tag.",
+    "url": "https://www.biorxiv.org/content/10.1101/2025.10.06.680180v1"
   },
   {
     "date": "2025-07-01",
-    "text": "New publication: TGFBR2-High mesenchymal glioma stem cells phenocopy regulatory T cells to suppress CD4+ and CD8+ T cell function."
+    "text": "New publication: TGFBR2-High mesenchymal glioma stem cells phenocopy regulatory T cells to suppress CD4+ and CD8+ T cell function.",
+    "url": "https://www.biorxiv.org/content/10.1101/2025.01.07.631757v1.full"
   },
   {
     "date": "2025-07-01",
@@ -69,15 +76,18 @@
   },
   {
     "date": "2024-07-01",
-    "text": "New publication: DNA methylation stochasticity is linked to transcriptional variability and identifies convergent epigenetic disruption across genetically-defined subtypes of AML."
+    "text": "New publication: DNA methylation stochasticity is linked to transcriptional variability and identifies convergent epigenetic disruption across genetically-defined subtypes of AML.",
+    "url": "https://www.biorxiv.org/content/10.1101/2024.10.26.620422v1.full"
   },
   {
     "date": "2024-07-01",
-    "text": "New publication: Quantifying Functional Conservation of Human and Mouse Regulatory Elements via FUNCODE."
+    "text": "New publication: Quantifying Functional Conservation of Human and Mouse Regulatory Elements via FUNCODE.",
+    "url": "https://github.com/WeiqiangZhou/FUNCODE"
   },
   {
     "date": "2024-07-01",
-    "text": "New publication: Alpha-Ketoglutarate is a master regulator of epigenetic reprogramming in pancreatic ductal adenocarcinoma progression."
+    "text": "New publication: Alpha-Ketoglutarate is a master regulator of epigenetic reprogramming in pancreatic ductal adenocarcinoma progression.",
+    "url": "https://doi.org/10.1158/1538-7445.AM2024-4397"
   },
   {
     "date": "2020-09-25",
