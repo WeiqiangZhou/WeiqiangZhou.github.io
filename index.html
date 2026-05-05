@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weiqiang Zhou — Computational Genomics</title>
   <meta name="description"
-        content="Weiqiang Zhou is an Assistant Scientist at Johns Hopkins Bloomberg School of Public Health working on statistical and computational tools for large-scale genomic data analysis.">
+        content="Weiqiang Zhou, PhD, is an Associate Scientist at Johns Hopkins Bloomberg School of Public Health developing statistical and computational tools for large-scale genomic data analysis.">
   <link rel="canonical" href="https://www.weiqiangzhou.com/">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72222972-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-72222972-2');
+    gtag('js', new Date()); gtag('config', 'UA-72222972-2');
   </script>
 </head>
 <body>
@@ -35,49 +33,53 @@
 
 <main class="main">
 
-  <!-- ── PROFILE ──────────────────────────────────────── -->
-  <section class="profile-section">
+  <!-- ── HERO ─────────────────────────────────────────── -->
+  <section class="hero">
     <div class="container">
-      <div class="profile-inner">
+      <div class="hero-inner">
 
-        <div class="profile-photo">
-          <!-- Replace profile.jpg with your photo, or use the GitHub raw URL below -->
-          <img src="https://raw.githubusercontent.com/WeiqiangZhou/WeiqiangZhou.github.io/master/about.JPG"
+        <div class="hero-avatar">
+          <img src="https://publichealth.jhu.edu/sites/default/files/styles/profile/public/2026-01/HART2046.JPG?h=d8102449&itok=adI8RNEP"
                alt="Weiqiang Zhou"
-               onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>👤</div>'">
+               onerror="this.style.display='none';this.parentElement.textContent='WZ'">
         </div>
 
-        <div class="profile-info">
-          <h1>Weiqiang Zhou</h1>
-          <p class="profile-title">Assistant Scientist</p>
-          <p class="profile-affil">
-            Department of Biostatistics · Johns Hopkins Bloomberg School of Public Health
+        <div class="hero-info">
+          <h1>Weiqiang Zhou, PhD</h1>
+          <p class="hero-title">Associate Scientist, Department of Biostatistics</p>
+          <p class="hero-affil">Johns Hopkins Bloomberg School of Public Health</p>
+
+          <p class="hero-bio">
+            I develop statistical and computational tools for integrative analysis of
+            large-scale genomic data, with a focus on gene regulation in cancer and
+            the immune system. My work spans single-cell multi-omics, chromatin
+            accessibility prediction, and regulatory genomics.
           </p>
-          <p class="profile-bio">
-            I develop statistical and computational methods for integrative analysis of
-            large-scale genomic data. My research focuses on single-cell multi-omics,
-            chromatin accessibility prediction, and regulatory genomics — building tools
-            that help researchers understand cell-type heterogeneity and gene regulation
-            at scale.
-          </p>
-          <div class="profile-links">
-            <a class="link-scholar"
+
+          <div class="hero-chips">
+            <span class="chip">Single-cell Genomics</span>
+            <span class="chip">Epigenomics</span>
+            <span class="chip">Chromatin Accessibility</span>
+            <span class="chip">Regulatory Genomics</span>
+            <span class="chip">Cancer Biology</span>
+          </div>
+
+          <div class="hero-links">
+            <a class="hero-link link-scholar"
                href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en"
                target="_blank">
               📚 Google Scholar
             </a>
-            <a class="link-github"
-               href="https://github.com/WeiqiangZhou"
-               target="_blank">
+            <a class="hero-link link-github"
+               href="https://github.com/WeiqiangZhou" target="_blank">
               💻 GitHub
             </a>
-            <a class="link-email"
+            <a class="hero-link link-email"
                href="mailto:kenzhou86@gmail.com">
               ✉️ Email
             </a>
-            <a class="link-twitter"
-               href="https://twitter.com/kenzhou86"
-               target="_blank">
+            <a class="hero-link link-twitter"
+               href="https://twitter.com/kenzhou86" target="_blank">
               🐦 Twitter / X
             </a>
           </div>
@@ -92,21 +94,19 @@
     <div class="container">
       <h2 class="section-title">Recent News</h2>
       <ul class="news-list" id="news-list">
-        <!-- Populated by JavaScript from data/news.json -->
-        <li style="color:#999;font-size:0.9rem;">Loading…</li>
+        <li style="color:var(--text-muted);font-size:0.9rem;padding:8px 0;">Loading…</li>
       </ul>
     </div>
   </section>
 
   <!-- ── SELECTED PUBLICATIONS ─────────────────────────── -->
-  <section class="section" style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <section class="section section-white">
     <div class="container">
       <h2 class="section-title">Selected Publications</h2>
       <ul class="pub-list" id="highlight-pubs">
-        <!-- Populated by JavaScript from data/publications.json -->
-        <li style="color:#999;font-size:0.9rem;">Loading…</li>
+        <li style="color:var(--text-muted);font-size:0.9rem;padding:8px 0;">Loading…</li>
       </ul>
-      <p style="margin-top:18px;font-size:0.88rem;">
+      <p style="margin-top:18px;font-size:0.87rem;">
         <a href="./publications.html">View all publications →</a>
       </p>
     </div>
@@ -122,16 +122,16 @@
       <a href="https://github.com/WeiqiangZhou" target="_blank">GitHub</a>
       <a href="https://twitter.com/kenzhou86" target="_blank">Twitter / X</a>
       <a href="mailto:kenzhou86@gmail.com">Email</a>
+      <a href="https://publichealth.jhu.edu/faculty/3739/weiqiang-zhou" target="_blank">JHU Profile</a>
     </div>
     <p class="footer-copy">
-      &copy; <span id="year"></span> Weiqiang Zhou ·
+      &copy; <span id="year"></span> Weiqiang Zhou &middot;
       Johns Hopkins Bloomberg School of Public Health
     </p>
   </div>
 </footer>
 
 <script>
-  // Update copyright year
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // ── Load news ──────────────────────────────────────────
@@ -141,8 +141,8 @@
       const list = document.getElementById('news-list');
       list.innerHTML = '';
       news.forEach(item => {
-        const d = new Date(item.date);
-        const label = d.toLocaleDateString('en-US', { year:'numeric', month:'short' });
+        const d = new Date(item.date + 'T00:00:00');
+        const label = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
         list.innerHTML += `
           <li class="news-item">
             <span class="news-date">${label}</span>
@@ -152,7 +152,7 @@
     })
     .catch(() => {
       document.getElementById('news-list').innerHTML =
-        '<li style="color:#999;font-size:0.9rem;">No news available.</li>';
+        '<li style="color:var(--text-muted);font-size:0.9rem;">No news items yet.</li>';
     });
 
   // ── Load highlighted publications ──────────────────────
@@ -163,26 +163,27 @@
       const shown = pubs.filter(p => p.highlight);
       list.innerHTML = '';
       shown.forEach(p => {
-        const note = p.note ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '';
         const doi  = p.doi  ? `<a class="pub-link-tag tag-doi" href="https://doi.org/${p.doi}" target="_blank">DOI</a>` : '';
+        const note = p.note ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '';
         list.innerHTML += `
-          <li class="pub-item highlight">
-            <p class="pub-title">
-              ${p.url
-                ? `<a href="${p.url}" target="_blank">${p.title}</a>`
-                : p.title}
-            </p>
-            <p class="pub-authors">${p.authors}</p>
-            <p class="pub-venue">
-              <em>${p.journal}</em>${p.volume ? ` ${p.volume}` : ''}${p.pages ? `, ${p.pages}` : ''} (${p.year})
-            </p>
-            <div class="pub-links">${doi}${note}</div>
+          <li class="pub-item">
+            <span class="pub-year-badge">${p.year}</span>
+            <div class="pub-body">
+              <p class="pub-title">
+                ${p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title}
+              </p>
+              <p class="pub-authors">${p.authors}</p>
+              <p class="pub-venue">
+                ${p.journal}${p.volume ? ' ' + p.volume : ''}${p.pages ? ', ' + p.pages : ''}
+              </p>
+              ${(doi || note) ? `<div class="pub-links">${doi}${note}</div>` : ''}
+            </div>
           </li>`;
       });
     })
     .catch(() => {
       document.getElementById('highlight-pubs').innerHTML =
-        '<li style="color:#999;font-size:0.9rem;">Could not load publications.</li>';
+        '<li style="color:var(--text-muted);font-size:0.9rem;">Could not load publications.</li>';
     });
 </script>
 
