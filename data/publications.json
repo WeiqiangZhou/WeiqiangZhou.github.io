@@ -117,7 +117,8 @@
     "highlight": false,
     "tags": [],
     "_source": "scholar",
-    "num_citations": 1
+    "num_citations": 1,
+    "software": "Hi-Plex CUT&Tag"
   },
   {
     "id": "ad0a02e7",
@@ -177,7 +178,8 @@
     "highlight": false,
     "tags": [],
     "_source": "scholar",
-    "num_citations": 0
+    "num_citations": 0,
+    "software": "scMBERT"
   },
   {
     "id": "f97dfc16",
@@ -282,7 +284,8 @@
     "highlight": false,
     "tags": [],
     "_source": "scholar",
-    "num_citations": 1
+    "num_citations": 1,
+    "software": "FUNCODE"
   },
   {
     "id": "a3a37cab",
@@ -618,7 +621,8 @@
       "epigenomics"
     ],
     "num_citations": 54,
-    "author_role": "first"
+    "author_role": "first",
+    "software": "SCATE"
   },
   {
     "id": "3b1ca4ac",
@@ -746,7 +750,8 @@
       "software",
       "epigenomics"
     ],
-    "num_citations": 57
+    "num_citations": 57,
+    "software": "SCRAT"
   },
   {
     "id": "dnase2017",
@@ -765,7 +770,8 @@
       "gene expression"
     ],
     "num_citations": 48,
-    "author_role": "first"
+    "author_role": "first",
+    "software": "BIRD"
   },
   {
     "id": "4e3f6beb",
