@@ -50,7 +50,7 @@
     "tagline": "Single-Cell Multiomic Representation Learning",
     "desc": "A pre-trained BERT-based deep learning model for single-cell multiomic data representation and prediction, enabling cross-modal inference and cell-type annotation.",
     "github": "",
-    "paper_url": "",
-    "paper_label": ""
+    "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/35242",
+    "paper_label": "Paper (AAAI)"
   }
 ]
