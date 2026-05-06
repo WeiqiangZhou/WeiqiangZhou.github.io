@@ -85,10 +85,11 @@
   let allPubs = [];
 
   function renderPub(p) {
-    const doi    = p.doi ? `<a class="pub-link-tag tag-doi"   href="https://doi.org/${p.doi}" target="_blank">DOI</a>` : '';
-    const paper  = p.url ? `<a class="pub-link-tag tag-paper" href="${p.url}"                 target="_blank">Paper</a>` : '';
-    const note   = p.note ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '';
-    const venue  = [p.journal, p.volume, p.pages ? p.pages : ''].filter(Boolean).join(' ');
+    const doi      = p.doi      ? `<a class="pub-link-tag tag-doi"      href="https://doi.org/${p.doi}" target="_blank">DOI</a>` : '';
+    const paper    = p.url      ? `<a class="pub-link-tag tag-paper"    href="${p.url}" target="_blank">Paper</a>` : '';
+    const software = p.software ? `<a class="pub-link-tag tag-software" href="./software.html">💻 ${p.software}</a>` : '';
+    const note     = p.note     ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '';
+    const venue    = [p.journal, p.volume, p.pages ? p.pages : ''].filter(Boolean).join(' ');
     return `
       <li class="pub-item">
         <span class="pub-year-badge">${p.year}</span>
@@ -100,7 +101,7 @@
           </p>
           ${p.authors ? `<p class="pub-authors">${p.authors}</p>` : ''}
           ${p.journal ? `<p class="pub-venue">${venue}</p>` : ''}
-          ${(doi || paper || note) ? `<div class="pub-links">${doi}${paper}${note}</div>` : ''}
+          ${(doi || paper || software || note) ? `<div class="pub-links">${doi}${paper}${software}${note}</div>` : ''}
         </div>
       </li>`;
   }
