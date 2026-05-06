@@ -100,8 +100,18 @@
     </div>
   </section>
 
-  <!-- ── SELECTED PUBLICATIONS ─────────────────────────── -->
+  <!-- ── MEDIA COVERAGE ───────────────────────────────── -->
   <section class="section section-white">
+    <div class="container">
+      <h2 class="section-title">Media Coverage</h2>
+      <ul class="news-list" id="media-list">
+        <li style="color:var(--text-muted);font-size:0.9rem;padding:8px 0;">Loading…</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── SELECTED PUBLICATIONS ─────────────────────────── -->
+  <section class="section">
     <div class="container">
       <h2 class="section-title">Selected Publications</h2>
       <ul class="pub-list" id="highlight-pubs">
@@ -135,13 +145,13 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // ── Load news (top 8 only) ─────────────────────────────
+  // ── Load news (top 5 only) ─────────────────────────────
   fetch('./data/news.json')
     .then(r => r.json())
     .then(news => {
       const list = document.getElementById('news-list');
       list.innerHTML = '';
-      news.slice(0, 8).forEach(item => {
+      news.slice(0, 5).forEach(item => {
         const d = new Date(item.date + 'T00:00:00');
         const label = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
         // If the text already contains HTML links, render as-is.
@@ -165,6 +175,30 @@
     .catch(() => {
       document.getElementById('news-list').innerHTML =
         '<li style="color:var(--text-muted);font-size:0.9rem;">No news items yet.</li>';
+    });
+
+  // ── Load media coverage ────────────────────────────────
+  fetch('./data/media.json')
+    .then(r => r.json())
+    .then(items => {
+      const list = document.getElementById('media-list');
+      list.innerHTML = '';
+      items.forEach(item => {
+        const d = new Date(item.date + 'T00:00:00');
+        const label = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+        list.innerHTML += `
+          <li class="news-item">
+            <span class="news-date">${label}</span>
+            <span class="news-text">
+              <strong>${item.outlet}</strong> &mdash;
+              <a href="${item.url}" target="_blank">${item.headline}</a>
+            </span>
+          </li>`;
+      });
+    })
+    .catch(() => {
+      document.getElementById('media-list').innerHTML =
+        '<li style="color:var(--text-muted);font-size:0.9rem;">No media items yet.</li>';
     });
 
   // ── Load highlighted publications ──────────────────────
