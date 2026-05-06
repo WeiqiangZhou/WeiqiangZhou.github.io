@@ -786,7 +786,8 @@
     "highlight": false,
     "tags": [],
     "_source": "scholar",
-    "num_citations": 6
+    "num_citations": 6,
+    "highlight_collab": false
   },
   {
     "id": "review2017",
@@ -798,12 +799,13 @@
     "pages": "88–105",
     "doi": "10.1159/000479301",
     "url": "https://www.karger.com/Article/Abstract/479301",
-    "highlight": true,
+    "highlight": false,
     "tags": [
       "review",
       "genomics"
     ],
-    "author_role": "first"
+    "author_role": "first",
+    "highlight_collab": false
   },
   {
     "id": "biorxiv2016",
