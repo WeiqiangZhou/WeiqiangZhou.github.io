@@ -25,6 +25,7 @@
       <li><a href="/" class="active">Home</a></li>
       <li><a href="./publications.html">Publications</a></li>
       <li><a href="./software.html">Software</a></li>
+      <li><a href="./teaching.html">Teaching</a></li>
       <li><a href="https://github.com/WeiqiangZhou" target="_blank">GitHub</a></li>
       <li><a href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
     </ul>
@@ -181,7 +182,8 @@
       const shown   = [...primary, ...collab];
       list.innerHTML = '';
       shown.forEach(p => {
-        const doi   = p.doi ? `<a class="pub-link-tag tag-doi" href="https://doi.org/${p.doi}" target="_blank">DOI</a>` : '';
+        const doi    = p.doi ? `<a class="pub-link-tag tag-doi"   href="https://doi.org/${p.doi}" target="_blank">DOI</a>` : '';
+        const paper  = p.url ? `<a class="pub-link-tag tag-paper" href="${p.url}"                 target="_blank">Paper</a>` : '';
         const isCollab = p.highlight_collab && !p.highlight;
         const badge = isCollab
           ? `<span class="pub-link-tag tag-collab">Collaboration</span>`
@@ -197,7 +199,7 @@
               <p class="pub-venue">
                 ${p.journal || ''}${p.volume ? ' ' + p.volume : ''}${p.pages ? ', ' + p.pages : ''}
               </p>
-              ${(doi || badge) ? `<div class="pub-links">${doi}${badge}</div>` : ''}
+              ${(doi || paper || badge) ? `<div class="pub-links">${doi}${paper}${badge}</div>` : ''}
             </div>
           </li>`;
       });
