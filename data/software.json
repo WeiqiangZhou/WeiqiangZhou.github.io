@@ -5,7 +5,7 @@
     "tagline": "Single-Cell ATAC-seq signal Extraction and Enhancement",
     "desc": "Extracts and enhances signal from sparse single-cell ATAC-seq data by leveraging information across cells and genomic loci. Enables accurate characterization of regulatory activity and cell-type heterogeneity.",
     "github": "https://github.com/zji90/SCATE",
-    "paper_url": "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02122-3",
+    "paper_url": "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02075-3",
     "paper_label": "Paper (Genome Bio.)"
   },
   {
