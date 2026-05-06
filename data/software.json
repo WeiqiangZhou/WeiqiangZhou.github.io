@@ -41,8 +41,8 @@
     "tagline": "Combinatorial Chromatin Regulatory Mapping",
     "desc": "A high-throughput multiplexed CUT&Tag approach for simultaneous profiling of multiple chromatin regulatory factors, enabling global mapping of combinatorial epigenetic states.",
     "github": "",
-    "paper_url": "",
-    "paper_label": ""
+    "paper_url": "https://www.biorxiv.org/content/10.1101/2025.10.06.680180v1",
+    "paper_label": "Preprint (bioRxiv)"
   },
   {
     "name": "scMBERT",
