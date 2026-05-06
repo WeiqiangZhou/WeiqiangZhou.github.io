@@ -131,7 +131,7 @@
   fetch('./data/publications.json')
     .then(r => r.json())
     .then(pubs => {
-      allPubs = pubs.sort((a,b) => b.year - a.year);
+      allPubs = pubs.filter(p => p.year > 0).sort((a,b) => b.year - a.year);
 
       const years = [...new Set(pubs.map(p => p.year))].sort((a,b) => b-a);
       const bar   = document.getElementById('filter-bar');
