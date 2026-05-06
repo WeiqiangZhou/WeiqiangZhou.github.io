@@ -25,6 +25,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="./publications.html" class="active">Publications</a></li>
       <li><a href="./software.html">Software</a></li>
+      <li><a href="./teaching.html">Teaching</a></li>
       <li><a href="https://github.com/WeiqiangZhou" target="_blank">GitHub</a></li>
       <li><a href="https://scholar.google.com/citations?user=BDB3l1oAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
     </ul>
@@ -84,9 +85,10 @@
   let allPubs = [];
 
   function renderPub(p) {
-    const doi  = p.doi  ? `<a class="pub-link-tag tag-doi" href="https://doi.org/${p.doi}" target="_blank">DOI / Open Access</a>` : '';
-    const note = p.note ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '';
-    const venue = [p.journal, p.volume, p.pages ? p.pages : ''].filter(Boolean).join(' ');
+    const doi    = p.doi ? `<a class="pub-link-tag tag-doi"   href="https://doi.org/${p.doi}" target="_blank">DOI</a>` : '';
+    const paper  = p.url ? `<a class="pub-link-tag tag-paper" href="${p.url}"                 target="_blank">Paper</a>` : '';
+    const note   = p.note ? `<span class="pub-link-tag tag-note">${p.note}</span>` : '';
+    const venue  = [p.journal, p.volume, p.pages ? p.pages : ''].filter(Boolean).join(' ');
     return `
       <li class="pub-item">
         <span class="pub-year-badge">${p.year}</span>
@@ -98,7 +100,7 @@
           </p>
           ${p.authors ? `<p class="pub-authors">${p.authors}</p>` : ''}
           ${p.journal ? `<p class="pub-venue">${venue}</p>` : ''}
-          ${(doi || note) ? `<div class="pub-links">${doi}${note}</div>` : ''}
+          ${(doi || paper || note) ? `<div class="pub-links">${doi}${paper}${note}</div>` : ''}
         </div>
       </li>`;
   }
