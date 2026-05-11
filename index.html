@@ -183,16 +183,26 @@
     .then(items => {
       const list = document.getElementById('media-list');
       list.innerHTML = '';
-      items.forEach(item => {
+      items.slice(0, 5).forEach(item => {
         const d = new Date(item.date + 'T00:00:00');
         const label = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+        let bodyHtml;
+        if (item.outlets && item.outlets.length) {
+          // Grouped: headline + outlet links
+          const outletLinks = item.outlets
+            .map(o => `<a href="${o.url}" target="_blank">${o.name}</a>`)
+            .join(' &middot; ');
+          bodyHtml = `<strong>${item.headline}</strong><br>
+              <span style="font-size:0.88em;color:var(--text-muted);">${outletLinks}</span>`;
+        } else {
+          // Single entry (legacy / future)
+          bodyHtml = `<strong>${item.outlet}</strong> &mdash;
+              <a href="${item.url}" target="_blank">${item.headline}</a>`;
+        }
         list.innerHTML += `
           <li class="news-item">
             <span class="news-date">${label}</span>
-            <span class="news-text">
-              <strong>${item.outlet}</strong> &mdash;
-              <a href="${item.url}" target="_blank">${item.headline}</a>
-            </span>
+            <span class="news-text">${bodyHtml}</span>
           </li>`;
       });
     })
