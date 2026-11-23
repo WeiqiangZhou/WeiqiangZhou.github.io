@@ -712,6 +712,20 @@
     "num_citations": 4
   },
   {
+    "id": "ee4a4714",
+    "year": 2020,
+    "title": "Sex-specific transcriptional profiles associate with severe SARS-CoV-2 infection",
+    "authors": "",
+    "journal": "medRxiv",
+    "volume": "",
+    "pages": "",
+    "doi": "10.1101/2020.11.12.20230417",
+    "url": "https://www.medrxiv.org/content/10.1101/2020.11.12.20230417v1",
+    "highlight": false,
+    "tags": [],
+    "_source": "scholar"
+  },
+  {
     "id": "9e7a5c88",
     "year": 2019,
     "title": "Sex differences in gene regulation in the dorsal root ganglion after nerve injury",
@@ -1220,19 +1234,5 @@
     "tags": [],
     "_source": "scholar",
     "num_citations": 2
-  },
-  {
-    "id": "ee4a4714",
-    "year": 0,
-    "title": "Sex-specific transcriptional profiles associate with severe SARS-CoV-2 infection",
-    "authors": "",
-    "journal": "",
-    "volume": "",
-    "pages": "",
-    "doi": "",
-    "url": "",
-    "highlight": false,
-    "tags": [],
-    "_source": "scholar"
   }
 ]
